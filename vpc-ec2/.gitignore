@@ -1,0 +1,4 @@
+.DS_store
+.terraform
+terraform.tfstate
+terraform.tfstate.backup

@@ -15,7 +15,7 @@ variable "root_segment" {}
 variable "app_private_segment1" {}
 variable "nat_public_segment" {}
 variable "client_vpn_segment" {}
-variable "fusic_global_id" {}
+variable "my_global_id" {}
 variable "customer_global_ip" {}
 
 #AZ Settings

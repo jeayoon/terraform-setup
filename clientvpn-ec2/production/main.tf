@@ -90,7 +90,7 @@ module "module_sg" {
     env                   = var.env
     root_segment          = var.root_segment
     account_name          = var.account_name
-    fusic_global_id       = var.fusic_global_id
+    my_global_id          = var.my_global_id
     customer_global_ip    = var.customer_global_ip
     client_vpn_segment    = var.client_vpn_segment
 

@@ -5,7 +5,7 @@ variable "env" {}
 variable "account_name" {}
 variable "vpc_id" {}
 variable "root_segment" {}
-variable "fusic_global_id" {}
+variable "my_global_id" {}
 variable "customer_global_ip" {}
 variable "client_vpn_sg" {}
 variable "client_vpn_segment" {}

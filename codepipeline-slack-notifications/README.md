@@ -1,5 +1,9 @@
 # terraform codepipeline(ver.ecs rolling update) & slack notifications
 
+## AWS infrastructure (Red Box)
+
+<img width="500" alt="スクリーンショット 2020-02-09 1 24 20" src="https://user-images.githubusercontent.com/17561411/74088541-ec89c800-4ada-11ea-8e41-cbb2b91da2d0.png">
+
 ## terraform version
 ```
 Terraform v0.12.9
@@ -23,4 +27,16 @@ For examples `${var.account_id}` >> `var.account_id`
 ├── policies                        
 │   └── codepipeline                // AWS CodePipeline Policy json files
 └── terraform.tfvars                // Terraform input variables
+```
+
+## run terraform
+
+```
+// Please specify the required values ​​for AWS resources in terraform.tfvars before deploy.
+
+// terraform dry run
+$ terraform plan
+
+// terraform deploy
+$ terraform apply
 ```

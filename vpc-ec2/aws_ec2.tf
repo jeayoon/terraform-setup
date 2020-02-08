@@ -1,5 +1,5 @@
 #--------------------------------------------------------------
-# resource Launch Configuration(業務管理)
+# resource Launch Configuration
 #--------------------------------------------------------------
 resource "aws_instance" "main" {
   ami                         = var.ec2_launch_ami

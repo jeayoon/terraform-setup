@@ -21,7 +21,7 @@ resource "aws_internet_gateway" "main" {
 #--------------------------------------------------------------
 # Public Subnets Settings
 #--------------------------------------------------------------
-#ec2(gyomu)
+#ec2 subnet
 resource "aws_subnet" "main" {
     vpc_id = aws_vpc.main.id
     cidr_block = var.ec2_public_segment1

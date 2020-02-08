@@ -12,4 +12,4 @@ This GitHub Repository is a collection of things you can build with Terraforms.
 
 - [Codepipeline & Slack](https://github.com/jeayoon/terraform-setup/tree/master/codepipeline-slack-notifications)
 
-- [Client VPN & EC2]()
+- [Client VPN & EC2](https://github.com/jeayoon/terraform-setup/tree/master/clientvpn-ec2)

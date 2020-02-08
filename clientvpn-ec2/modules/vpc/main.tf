@@ -10,6 +10,6 @@ variable "env" {}
 resource "aws_vpc" "main" {
     cidr_block = var.cidr
     tags = {
-        Name = "tokyo-nokodai-ml-${var.env}-vpc"
+        Name = "my-${var.env}-vpc"
     }
 }

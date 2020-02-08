@@ -37,13 +37,6 @@ resource "aws_security_group" "ec2" {
         security_groups = [aws_security_group.client_vpn.id]
         description = "Connect with ClientVPN SG for http"
     }
-    ingress {
-        from_port = 8888
-        to_port = 8888
-        protocol = "tcp"
-        security_groups = [aws_security_group.client_vpn.id]
-        description = "Connect with ClientVPN SG for JupyterNotebook"
-    }
     egress {
         from_port = 0
         to_port = 0
@@ -72,13 +65,6 @@ resource "aws_security_group" "client_vpn" {
         protocol = "tcp"
         cidr_blocks = [var.root_segment]
         description = "SSH"
-    }
-    ingress {
-        from_port = 8888
-        to_port = 8888
-        protocol = "tcp"
-        cidr_blocks = [var.root_segment]
-        description = "Connet JupyterNotebook"
     }
     ingress {
         from_port = 80

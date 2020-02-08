@@ -2,8 +2,8 @@
 # Provider Settings
 #--------------------------------------------------------------
 provider "aws" {
-    shared_credentials_file = "/Users/please input your user name/.aws/credentials"
-    profile                 = "tokyo-nokodai"
+    shared_credentials_file = "/Users/Please input your user name/.aws/credentials"
+    profile                 = "Please input your profile"
     region                  = "ap-northeast-1"
 }
 
@@ -13,7 +13,7 @@ provider "aws" {
 terraform {
   required_version = ">= 0.12"
   backend "s3" {
-    bucket = "please input your bucket name"      # s3 bucket name
+    bucket = "Please input your bucket name"      # s3 bucket name
     region = "ap-northeast-1"
     key = "production/terraform.tfstate"
     encrypt = true

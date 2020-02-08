@@ -2,7 +2,7 @@
 
 ## AWS infrastructure
 
-<img width="500" alt="スクリーンショット 2020-02-09 1 14 07" src="https://user-images.githubusercontent.com/17561411/74088402-85b7df00-4ad9-11ea-91fa-f534be1074a4.png">
+<img width="700" alt="スクリーンショット 2020-02-09 1 14 07" src="https://user-images.githubusercontent.com/17561411/74088402-85b7df00-4ad9-11ea-91fa-f534be1074a4.png">
 
 ## terraform version
 ```

@@ -83,11 +83,11 @@ aws acm import-certificate --certificate file://{$your-domain}.crt --private-key
 ## run terraform
 
 ```
-// Please specify the required values ​​for AWS resources in terraform.tfvars before deploy.
+// Please specify the required values ​​for AWS resources in production/terraform.tfvars before deploy.
 
 // terraform dry run
-$ terraform plan
+$ production/terraform plan
 
 // terraform deploy
-$ terraform apply
+$ production/terraform apply
 ```

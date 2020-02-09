@@ -11,6 +11,6 @@ output "db_subnet1_id" {
 
 output "db_subnet2_id" {
     value = aws_subnet.db_subnet2.id
-    description = "DB Subnet1 ID"
+    description = "DB Subnet2 ID"
 }
 

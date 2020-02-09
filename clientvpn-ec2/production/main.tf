@@ -153,7 +153,7 @@ module "module_cloudwatch" {
 }
 
 #--------------------------------------------------------------
-#  Rols Settings
+#  Roles Settings
 #--------------------------------------------------------------
 module "module_role" {
     source = "../modules/role"

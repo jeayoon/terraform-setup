@@ -36,7 +36,3 @@ variable "db_password" {}
 variable "db_instance_class" {}
 variable "db_allocated_storage" {}
 variable "db_backup_retention_period" {}
-
-
-
-

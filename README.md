@@ -8,7 +8,7 @@ This GitHub Repository is a collection of things you can build with Terraforms.
 
 - [VPC & EC2](https://github.com/jeayoon/terraform-setup/tree/master/vpc-ec2)
 
-- [VPC & EC2 & RDS]()
+- [VPC & EC2 & RDS](https://github.com/jeayoon/terraform-setup/tree/master/vpc-ec2-rds)
 
 - [Codepipeline & Slack](https://github.com/jeayoon/terraform-setup/tree/master/codepipeline-slack-notifications)
 

@@ -2,7 +2,8 @@
 
 ## AWS infrastructure (Red Box)
 
-<img width="700" alt="スクリーンショット 2020-02-09 1 24 20" src="https://user-images.githubusercontent.com/17561411/74088541-ec89c800-4ada-11ea-8e41-cbb2b91da2d0.png">
+<img width="700" alt="スクリーンショット 2020-02-09 1 24 20" src="https://user-images.githubusercontent.com/17561411/74694804-e3180280-5234-11ea-9600-c9252ac4bb54.png">
+
 
 ## terraform version
 ```

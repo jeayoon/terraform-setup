@@ -55,7 +55,7 @@ Common Name (eg: your user, host, or server name) [Easy-RSA CA]:my-common-name
 ./easyrsa build-server-full {$your-domain} nopass
  
 # make client certificate
-./easyrsa build-client-full {$your-domain} nopass
+./easyrsa build-client-full client.{$your-domain} nopass
 
 mkdir tmp
 cp pki/ca.crt tmp/

@@ -52,7 +52,7 @@ cd easy-rsa/easyrsa3
 Common Name (eg: your user, host, or server name) [Easy-RSA CA]:my-common-name
  
 # make server certificate
-./easyrsa build-server-full server nopass
+./easyrsa build-server-full {$your-domain} nopass
  
 # make client certificate
 ./easyrsa build-client-full {$your-domain} nopass

@@ -16,4 +16,4 @@ This GitHub Repository is a collection of things you can build with Terraforms.
 
 ### Azure Infrastructure
 
-- [azurerm-vm]()
+- [azurerm-vm](https://github.com/jeayoon/terraform-setup/tree/add_azure_vm/azurerm-vm)

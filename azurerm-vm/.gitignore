@@ -1,0 +1,5 @@
+.terraform
+errored.tfstate
+terraform.tfvars_temp
+terraform.tfstate
+terraform.tfstate.backup

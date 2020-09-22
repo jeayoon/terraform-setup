@@ -13,3 +13,7 @@ This GitHub Repository is a collection of things you can build with Terraforms.
 - [Codepipeline & Slack](https://github.com/jeayoon/terraform-setup/tree/master/codepipeline-slack-notifications)
 
 - [Client VPN & EC2](https://github.com/jeayoon/terraform-setup/tree/master/clientvpn-ec2)
+
+### Azure Infrastructure
+
+- [azurerm-vm](https://github.com/jeayoon/terraform-setup/tree/add_azure_vm/azurerm-vm)

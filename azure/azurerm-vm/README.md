@@ -10,10 +10,7 @@ Terraform v0.12.26
 + provider.tls v2.1.1
 ```
 
-## terraform file tree
-```
-
-```
+## Usage
 
 ## run terraform
 

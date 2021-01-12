@@ -5,8 +5,6 @@ provider "azurerm" {
   # The "feature" block is required for AzureRM provider 2.x.
   # If you're using version 1.x, the "features" block is not allowed.
   version         = "~>2.0"
-  # subscription_id = var.subscription_id
-  # tenant_id       = var.tenant_id
   features {}
 }
 
@@ -50,22 +48,3 @@ module "virtual_machine" {
   resource_group_name = var.resource_group_name
   azurerm_network_interface_id = module.virtual_network.azurerm_network_interface_id
 }
-
-#--------------------------------------------------------------
-# Module k8s Settings
-#--------------------------------------------------------------
-# module "k8s" {
-#   source = "../modules/k8s"
-
-#   location = var.location
-#   client_id = var.client_id
-#   dns_prefix = var.dns_prefix
-#   agent_count = var.agent_count
-#   cluster_name = var.cluster_name
-#   client_secret = var.client_secret
-#   ssh_public_key = var.ssh_public_key
-#   resource_group_name = var.resource_group_name
-#   log_analytics_workspace_sku = var.log_analytics_workspace_sku
-#   log_analytics_workspace_name = var.log_analytics_workspace_name
-#   log_analytics_workspace_location = var.log_analytics_workspace_location
-# }

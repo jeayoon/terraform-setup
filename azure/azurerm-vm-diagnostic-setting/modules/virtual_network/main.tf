@@ -13,24 +13,20 @@ resource "azurerm_virtual_network" "main" {
   address_space       = ["172.0.0.0/16"]
   location            = var.location
   resource_group_name = var.resource_group_name
-
-  tags = {
-    environment = "Terraform Demo"
-  }
 }
 
 #--------------------------------------------------------------
 # Subnet
 #--------------------------------------------------------------
-resource "azurerm_subnet" "subnet_o" {
-  name                 = "mySTerrafom_o"
+resource "azurerm_subnet" "subnet01" {
+  name                 = "mySubnet01"
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.main.name
   address_prefixes     = ["172.0.1.0/24"]
 }
 
-resource "azurerm_subnet" "subnet_t" {
-  name                 = "mySTerrafom_t"
+resource "azurerm_subnet" "subnet02" {
+  name                 = "mySubnet02"
   resource_group_name  = var.resource_group_name
   virtual_network_name = azurerm_virtual_network.main.name
   address_prefixes     = ["172.0.2.0/24"]
@@ -40,23 +36,19 @@ resource "azurerm_subnet" "subnet_t" {
 # Public IP
 #--------------------------------------------------------------
 resource "azurerm_public_ip" "main" {
-  name                = "myPITerraform"
+  name                = "myPubIP"
   location            = var.location
   resource_group_name = var.resource_group_name
   allocation_method   = "Dynamic"
 
   depends_on = [var.resource_group_name]
-
-  tags = {
-    environment = "Terraform Demo"
-  }
 }
 
 #--------------------------------------------------------------
 # Security Group
 #--------------------------------------------------------------
 resource "azurerm_network_security_group" "main" {
-  name                = "mySGTerraform"
+  name                = "myNSG"
   location            = var.location
   resource_group_name = var.resource_group_name
 
@@ -73,17 +65,13 @@ resource "azurerm_network_security_group" "main" {
   }
 
   depends_on = [var.resource_group_name]
-
-  tags = {
-    environment = "Terraform Demo"
-  }
 }
 
 #--------------------------------------------------------------
 # Network Interface
 #--------------------------------------------------------------
 resource "azurerm_network_interface" "main" {
-  name                = "myNITerraform"
+  name                = "myInterface"
   location            = var.location
   resource_group_name = var.resource_group_name
 
@@ -92,10 +80,6 @@ resource "azurerm_network_interface" "main" {
     subnet_id                     = azurerm_subnet.subnet_t.id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.main.id
-  }
-
-  tags = {
-    environment = "Terraform Demo"
   }
 }
 

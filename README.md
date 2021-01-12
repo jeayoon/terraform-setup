@@ -16,5 +16,5 @@ This GitHub Repository is a collection of things you can build with Terraforms.
 
 ### Azure Infrastructure
 
-- [azurerm-vm](https://github.com/jeayoon/terraform-setup/tree/master/azure/azurerm-vm)
-- [azurerm-vm-diagnostic-setting](https://github.com/jeayoon/terraform-setup/tree/master/azure/azurerm-vm-diagnostic-setting)
+- [Virtual machine & Vnet](https://github.com/jeayoon/terraform-setup/tree/master/azure/azurerm-vm)
+- [Virtual machine Diagnostic setting & Vnet](https://github.com/jeayoon/terraform-setup/tree/master/azure/azurerm-vm-diagnostic-setting)

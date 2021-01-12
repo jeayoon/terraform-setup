@@ -6,14 +6,15 @@ This GitHub Repository is a collection of things you can build with Terraforms.
 
 ### AWS Infrastructure
 
-- [VPC & EC2](https://github.com/jeayoon/terraform-setup/tree/master/vpc-ec2)
+- [VPC & EC2](https://github.com/jeayoon/terraform-setup/tree/master/aws/vpc-ec2)
 
-- [VPC & EC2 & RDS](https://github.com/jeayoon/terraform-setup/tree/master/vpc-ec2-rds)
+- [VPC & EC2 & RDS](https://github.com/jeayoon/terraform-setup/tree/master/aws/vpc-ec2-rds)
 
-- [Codepipeline & Slack](https://github.com/jeayoon/terraform-setup/tree/master/codepipeline-slack-notifications)
+- [Codepipeline & Slack](https://github.com/jeayoon/terraform-setup/tree/master/aws/codepipeline-slack-notifications)
 
-- [Client VPN & EC2](https://github.com/jeayoon/terraform-setup/tree/master/clientvpn-ec2)
+- [Client VPN & EC2](https://github.com/jeayoon/terraform-setup/tree/master/aws/clientvpn-ec2)
 
 ### Azure Infrastructure
 
-- [azurerm-vm](https://github.com/jeayoon/terraform-setup/tree/add_azure_vm/azurerm-vm)
+- [azurerm-vm](https://github.com/jeayoon/terraform-setup/tree/master/azure/azurerm-vm)
+- [azurerm-vm-diagnostic-setting](https://github.com/jeayoon/terraform-setup/tree/master/azure/azurerm-vm-diagnostic-setting)

@@ -12,7 +12,8 @@ provider "aws" {
 terraform {
   required_version = ">= 0.12"
   backend "s3" {
-    bucket = "Please input your bucket name"      # s3 bucket name
+    # bucket = "Please input your bucket name"      # s3 bucket name
+    bucket = "myterraformpretzel"
     region = "ap-northeast-1"
     key = "test/terraform.tfstate"
     encrypt = true

@@ -10,7 +10,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket  = "tfbucket231011" # s3 bucket name
+    bucket  = "" # s3 bucket name
     region  = "ap-northeast-1"
     key     = "fargate-codepipeline/terraform.tfstate"
     encrypt = true

@@ -1,0 +1,43 @@
+version: 0.2
+
+env:
+  parameter-store:
+    AWS_ACCOUNT_ID: "MY_ACCOUNT_ID"
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t $ECR_NAME:$IMAGE_TAG .
+      - docker tag $ECR_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$ECR_NAME:$IMAGE_TAG      
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image...
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$ECR_NAME:$IMAGE_TAG
+      - printf '{"ImageURI":"%s"}' $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$ECR_NAME:$IMAGE_TAG  > imageDetail.json
+      - echo "$(cat imageDetail.json)"
+      - echo Rewriting task definitions file...
+      - sed -i -e "s#<ECR_NAME>#$ECR_NAME#" taskdef.json
+      - sed -i -e "s#<IMAGE_TAG>#$IMAGE_TAG#" taskdef.json
+      - sed -i -e "s#<LOGS_GROUP>#$LOGS_GROUP#" taskdef.json
+      - sed -i -e "s#<TASK_FAMILY>#$TASK_FAMILY#" taskdef.json
+      - sed -i -e "s#<TASK_ROLE_NAME>#$TASK_ROLE_NAME#" taskdef.json
+      - sed -i -e "s#<CONTAINER_NAME>#$CONTAINER_NAME#" taskdef.json
+      - sed -i -e "s#<AWS_ACCOUNT_ID>#$AWS_ACCOUNT_ID#" taskdef.json
+      - sed -i -e "s#<EXECUTION_ROLE_NAME>#$EXECUTION_ROLE_NAME#" taskdef.json
+      - sed -i -e "s#<AWS_DEFAULT_REGION>#$AWS_DEFAULT_REGION#" taskdef.json
+      - echo "$(cat taskdef.json)"
+      - echo Rewriting appspec file...
+      - sed -i -e "s#<CONTAINER_NAME>#$CONTAINER_NAME#" appspec.yml
+      - echo "$(cat appspec.yml)"
+
+artifacts:
+  files: 
+    - imageDetail.json
+    - taskdef.json
+    - appspec.yml

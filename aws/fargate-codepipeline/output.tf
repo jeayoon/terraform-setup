@@ -7,7 +7,3 @@ output "alb_dns_name" {
   description = "ALB DNS Name"
   value       = try(aws_lb.main.dns_name, "")
 }
-
-output "name" {
-  value = aws_ecs_task_definition.main.family
-}

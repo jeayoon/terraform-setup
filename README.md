@@ -14,6 +14,8 @@ This GitHub Repository is a collection of things you can build with Terraforms.
 
 - [Client VPN & EC2](https://github.com/jeayoon/terraform-setup/tree/master/aws/clientvpn-ec2)
 
+- [Fargate & CodePipeline](https://github.com/jeayoon/terraform-setup/tree/master/aws/fargate-codepipeline)
+
 ### Azure Infrastructure
 
 - [Virtual machine & Vnet](https://github.com/jeayoon/terraform-setup/tree/master/azure/azurerm-vm)

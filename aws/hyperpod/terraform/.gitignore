@@ -1,0 +1,10 @@
+.DS_Store
+# Compiled files
+*.tfstate
+*.tfstate.*.backup
+terraform.tfvars
+.terraform.lock.hcl
+tfplan.txt
+# Module directory
+.terraform/
+.aws/*

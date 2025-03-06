@@ -1,0 +1,13 @@
+{
+    "version": "1.0.0",
+    "workload_manager": "slurm",
+    "controller_group": "leo-stg-head-ig",
+    "worker_groups": [
+        {
+            "instance_group_name": "leo-stg-compute-ig",
+            "partition_name": "partition-1"
+        }
+    ],
+    "fsx_dns_name": "fs-07feee9b0e55d7c5d.fsx.ap-northeast-1.amazonaws.com",
+    "fsx_mountname": "4lpqtbev"
+}

@@ -1,0 +1,46 @@
+{
+    "ClusterName": "leo-stg-hyperpod-cluster",
+    
+    "InstanceGroups": [
+        {
+            
+            "InstanceGroupName": "leo-stg-head-ig",
+            "InstanceType": "ml.m5.large",
+            "InstanceCount": 1,
+            "LifeCycleConfig": {
+              "SourceS3Uri": "s3://leo-stg-hyperpod-lifecycle-7d460cc5/lifecycle-script-directory/src",
+              "OnCreate": "on_create.sh"
+            },
+            "ExecutionRole": "arn:aws:iam::640168457519:role/leo-stg-SagemakerHyperpod-Role",
+            "InstanceStorageConfigs": [
+                {
+                   "EbsVolumeConfig":{     
+                      "VolumeSizeInGB": 30
+                   }
+                }
+            ]
+        },
+        {
+            "InstanceGroupName": "leo-stg-compute-ig",
+            "InstanceType": "ml.g5.xlarge",
+            "InstanceCount": 1,
+            "LifeCycleConfig": {
+              "SourceS3Uri": "s3://leo-stg-hyperpod-lifecycle-7d460cc5/lifecycle-script-directory/src",
+              "OnCreate": "on_create.sh"
+            },
+            "ExecutionRole": "arn:aws:iam::640168457519:role/leo-stg-SagemakerHyperpod-Role",
+            "InstanceStorageConfigs": [
+                {
+                   "EbsVolumeConfig":{     
+                      "VolumeSizeInGB": 30
+                   }
+                }
+            ]
+        }
+    ],
+    "VpcConfig": {
+      "SecurityGroupIds": ["sg-0e4b9d4777c5d81a9"],
+      "Subnets":["subnet-0e30f0724f1463291"]
+    }
+}
+

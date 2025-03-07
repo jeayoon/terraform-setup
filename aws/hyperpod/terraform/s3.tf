@@ -13,7 +13,8 @@ resource "random_id" "guid" {
 
 # S3 bucket Hyperpod Lifectcle scripts
 resource "aws_s3_bucket" "lifecycle_scripts" {
-  bucket = join("-", [var.project_name, var.env, var.s3_lifecycle_scripts, random_id.guid.hex])
+  bucket        = join("-", [var.project_name, var.env, var.s3_lifecycle_scripts, random_id.guid.hex])
+  force_destroy = true
 }
 
 resource "aws_s3_bucket_lifecycle_configuration" "bucket-config" {
@@ -36,7 +37,8 @@ resource "aws_s3_object" "lifecycle_scripts" {
 
 # S3 bucket Hyperpod Backup
 resource "aws_s3_bucket" "backup" {
-  bucket = join("-", [var.project_name, var.env, var.s3_backup, random_id.guid.hex])
+  bucket        = join("-", [var.project_name, var.env, var.s3_backup, random_id.guid.hex])
+  force_destroy = true
 }
 
 resource "aws_s3_bucket_public_access_block" "backup" {
@@ -62,5 +64,6 @@ resource "aws_s3_object" "backup" {
 
 # S3 bucket FSx Lustre
 resource "aws_s3_bucket" "lustre" {
-  bucket = join("-", [var.project_name, var.env, var.s3_lustre, random_id.guid.hex])
+  bucket        = join("-", [var.project_name, var.env, var.s3_lustre, random_id.guid.hex])
+  force_destroy = true
 }

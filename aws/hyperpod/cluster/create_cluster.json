@@ -11,7 +11,7 @@
               "SourceS3Uri": "s3://leo-stg-hyperpod-lifecycle-7d460cc5/lifecycle-script-directory/src",
               "OnCreate": "on_create.sh"
             },
-            "ExecutionRole": "arn:aws:iam::640168457519:role/leo-stg-SagemakerHyperpod-Role",
+            "ExecutionRole": "arn:aws:iam::xxxxx:role/leo-stg-SagemakerHyperpod-Role",
             "InstanceStorageConfigs": [
                 {
                    "EbsVolumeConfig":{     
@@ -28,7 +28,7 @@
               "SourceS3Uri": "s3://leo-stg-hyperpod-lifecycle-7d460cc5/lifecycle-script-directory/src",
               "OnCreate": "on_create.sh"
             },
-            "ExecutionRole": "arn:aws:iam::640168457519:role/leo-stg-SagemakerHyperpod-Role",
+            "ExecutionRole": "arn:aws:iam::xxxxx:role/leo-stg-SagemakerHyperpod-Role",
             "InstanceStorageConfigs": [
                 {
                    "EbsVolumeConfig":{     

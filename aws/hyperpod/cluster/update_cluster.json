@@ -1,17 +1,17 @@
 {
-  "ClusterName": "rois01-stg-hyperpod-cluster",
+  "ClusterName": "leo-stg-hyperpod-cluster",
   
   "InstanceGroups": [
       {
           
-          "InstanceGroupName": "rois01-stg-head-ig",
+          "InstanceGroupName": "leo-stg-head-ig",
           "InstanceType": "ml.m5.large",
           "InstanceCount": 1,
           "LifeCycleConfig": {
-            "SourceS3Uri": "s3://rois01-stg-hyperpod-lifecycle-d84ce7a0/lifecycle-script-directory/src",
+            "SourceS3Uri": "s3://leo-stg-hyperpod-lifecycle-778c45ef/lifecycle-script-directory/src",
             "OnCreate": "on_create.sh"
           },
-          "ExecutionRole": "arn:aws:iam::253854447487:role/rois01-stg-SagemakerHyperpod-Role",
+          "ExecutionRole": "arn:aws:iam::xxxxx:role/leo-stg-SagemakerHyperpod-Role",
           "ThreadsPerCore": 2,
           "InstanceStorageConfigs": [
               {
@@ -22,14 +22,14 @@
           ]
       },
       {
-          "InstanceGroupName": "rois01-stg-compute-ig",
+          "InstanceGroupName": "leo-stg-compute-ig",
           "InstanceType": "ml.g5.xlarge",
-          "InstanceCount": 1,
+          "InstanceCount": 4,
           "LifeCycleConfig": {
-            "SourceS3Uri": "s3://rois01-stg-hyperpod-lifecycle-d84ce7a0/lifecycle-script-directory/src",
+            "SourceS3Uri": "s3://leo-stg-hyperpod-lifecycle-778c45ef/lifecycle-script-directory/src",
             "OnCreate": "on_create.sh"
           },
-          "ExecutionRole": "arn:aws:iam::253854447487:role/rois01-stg-SagemakerHyperpod-Role",
+          "ExecutionRole": "arn:aws:iam::xxxxx:role/leo-stg-SagemakerHyperpod-Role",
           "ThreadsPerCore": 2,
           "InstanceStorageConfigs": [
               {

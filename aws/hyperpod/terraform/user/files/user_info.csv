@@ -1,0 +1,6 @@
+User,UID,GID,Group,SudoOption,Password
+user1,1010,1010,group1,y,user1
+user2,1011,1010,group1,y,user2
+user3,1012,1011,group2,n,user3
+user4,1013,1012,group3,n,user4
+user5,1014,1013,group4,n,user5

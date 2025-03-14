@@ -25,5 +25,5 @@ variable "aws_region" {
 variable "access_key_dir" {
   type        = string
   description = "Access Key Download Dir"
-  default     = "~/Downloads/AWS_HyperPod_AccessKey/"
+  default     = "~/Downloads/AWS_HyperPod_AccessInfo/"
 }

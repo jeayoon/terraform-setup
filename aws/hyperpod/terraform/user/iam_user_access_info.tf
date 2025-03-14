@@ -1,17 +1,4 @@
 # IAM User AccessKey
-# resource "local_file" "main" {
-#   for_each = module.iam_user.aws_iam_access_keys
-
-#   content  = "access_key,secret_key\n${each.value.id},${each.value.secret}"
-#   filename = pathexpand("${var.access_key_dir}/${var.env}/${each.key}/${join("-", [var.project_name, var.env, each.key, "access", "key"])}.csv")
-
-#   lifecycle {
-#     prevent_destroy = true
-#     ignore_changes  = [content]
-#   }
-# }
-
-# IAM User AccessKey
 resource "local_file" "main" {
   for_each = {
     for key, value in module.iam_user.aws_iam_access_keys : key => {
@@ -23,7 +10,7 @@ resource "local_file" "main" {
   }
 
   content  = "access_key,secret_key,os_username,os_password\n${each.value.access_key},${each.value.secret_key},${each.value.user_info.User},${each.value.user_info.Password}"
-  filename = pathexpand("${var.access_key_dir}/${var.env}/${each.key}/${join("-", [var.project_name, var.env, each.key, "access", "key"])}.csv")
+  filename = pathexpand("${var.access_key_dir}/${var.env}/${each.key}/${join("-", [var.project_name, var.env, each.key, "access", "info"])}.csv")
 
   lifecycle {
     prevent_destroy = true
